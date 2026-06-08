@@ -3,18 +3,27 @@
 /* next-themes uses attribute="class"; drive dark: variants off the .dark class. */
 @custom-variant dark (&:where(.dark, .dark *));
 
-/* ---- Light theme: warm paper ---- */
+/* ---- Light theme: clean warm white ---- */
 :root {
-  --background: #f3f1ea;
-  --surface: #faf8f2;
-  --surface-2: #ece8dd;
-  --foreground: #15140e;
-  --muted: #6a685c;
-  --line: #e7e2d6;
-  --line-strong: #d6d0c1;
-  --accent: #a85e06;
-  --accent-strong: #884c05;
-  --gold: #9a6c08;
+  /* Off-white page so pure-white cards visibly lift off it. */
+  --background: #f8f7f4;
+  /* Cards are pure white + a soft shadow (see --card-shadow). */
+  --surface: #ffffff;
+  /* Recessed wells (image placeholders, thumbs) read slightly darker. */
+  --surface-2: #ececdf;
+  /* Near-black text, not dark grey. */
+  --foreground: #0f0f0f;
+  /* Darker muted grey so secondary text still clears ~7:1 on white. */
+  --muted: #57544c;
+  /* Visible hairline + a clearly darker strong border. */
+  --line: #d9d4c7;
+  --line-strong: #b7b09e;
+  /* Deeper, richer amber so it reads with weight on light surfaces. */
+  --accent: #b45309;
+  --accent-strong: #8a3d06;
+  --gold: #a16207;
+  /* Soft resting shadow that gives white cards definition. */
+  --card-shadow: 0 1px 2px rgba(17, 17, 17, 0.05), 0 6px 20px rgba(17, 17, 17, 0.06);
   color-scheme: light;
 }
 
@@ -30,6 +39,8 @@
   --accent: #f0a92b;
   --accent-strong: #ffc463;
   --gold: #f4b829;
+  /* Dark cards already separate by lightness — no resting shadow needed. */
+  --card-shadow: 0 0 0 0 transparent;
   color-scheme: dark;
 }
 
@@ -44,6 +55,8 @@
   --color-accent: var(--accent);
   --color-accent-strong: var(--accent-strong);
   --color-gold: var(--gold);
+  /* Theme-aware card shadow — `shadow-card` utility. */
+  --shadow-card: var(--card-shadow);
   --font-sans: var(--font-space-grotesk);
   --font-mono: var(--font-jetbrains-mono);
 }

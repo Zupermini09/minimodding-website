@@ -95,7 +95,7 @@ export default async function ModPage({
           </p>
         </section>
 
-        <aside className="rounded-3xl border border-line bg-surface p-7">
+        <aside className="rounded-3xl border border-line bg-surface shadow-card p-7">
           <p className="label text-accent">Download</p>
           <div className="mt-5 flex flex-col gap-3">
             {mod.downloads.map((download) => (

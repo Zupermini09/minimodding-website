@@ -76,7 +76,7 @@ export default function Home() {
 
           <Link
             href={`/mods/${featured.slug}`}
-            className="group grid grid-cols-1 overflow-hidden rounded-3xl border border-line bg-surface transition-all duration-300 hover:border-line-strong hover:shadow-2xl hover:shadow-black/5 lg:grid-cols-2"
+            className="group grid grid-cols-1 overflow-hidden rounded-3xl border border-line bg-surface shadow-card transition-all duration-300 hover:border-line-strong hover:shadow-2xl hover:shadow-black/5 lg:grid-cols-2"
           >
             <div className="relative aspect-[16/10] overflow-hidden lg:aspect-auto lg:min-h-[26rem]">
               <SmartImage

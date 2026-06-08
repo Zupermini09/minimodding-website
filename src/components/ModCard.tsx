@@ -16,7 +16,7 @@ export default function ModCard({ mod, index }: ModCardProps) {
   return (
     <Link
       href={`/mods/${mod.slug}`}
-      className="group relative flex flex-col overflow-hidden rounded-3xl border border-line bg-surface transition-all duration-300 hover:-translate-y-1.5 hover:border-line-strong hover:shadow-2xl hover:shadow-black/5"
+      className="group relative flex flex-col overflow-hidden rounded-3xl border border-line bg-surface shadow-card transition-all duration-300 hover:-translate-y-1.5 hover:border-line-strong hover:shadow-2xl hover:shadow-black/5"
     >
       {/* Cover */}
       <div className="relative aspect-[16/10] overflow-hidden">
