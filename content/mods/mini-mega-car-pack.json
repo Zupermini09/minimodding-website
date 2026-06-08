@@ -2,7 +2,7 @@
   "id": "mini-mega-car-pack",
   "name": "Mini's Mega Car Pack",
   "slug": "mini-mega-car-pack",
-  "tagline": "130+ cars. Every one tested. Every one configured.",
+  "tagline": "100+ cars. Every one tested. Every one configured.",
   "featured": true,
   "isPaid": false,
   "starred": true,
@@ -14,32 +14,30 @@
   "description": "The most curated car pack for BeamNG.drive. Every vehicle is individually tested, configured from scratch, and given custom thumbnails. No broken mods. No filler — just 130+ vehicles that load clean, drive right, and sit correctly in the spawn menu.",
   "downloads": [
     {
-      "label": "Free Download (Lite Version)",
-      "url": "https://modsfire.com/yourlink",
+      "label": "Free Download (Lite Version) Comming Soon!",
+      "url": "https://zupermini09.github.io/minimodding-website/",
       "type": "free"
     },
     {
       "label": "Subscriber Download (Full Pack)",
-      "url": "https://drive.google.com/yourlink",
+      "url": "https://buymeacoffee.com/emilianovec/whole-car-packs",
       "type": "paid"
     }
   ],
   "changelogs": [
     {
-      "version": "2.5",
+      "version": "2.4",
       "date": "2025-06-08",
       "notes": [
-        "Added 15 new vehicles",
-        "Replaced broken Trabant 601 with working alternative",
-        "Custom thumbnails for all 130 cars",
-        "All default presets removed — custom configs for every car"
+        "Added 30 new vehicles",
+        "Custom thumbnails for all 25 car brands",
       ]
     },
     {
-      "version": "2.4",
+      "version": "2.31",
       "date": "2024-12-01",
       "notes": [
-        "Added Porsche and Volvo packs",
+        "Added 15 new vehicles",
         "Fixed config issues on 8 vehicles"
       ]
     },
@@ -47,8 +45,8 @@
       "version": "2.3",
       "date": "2024-08-14",
       "notes": [
-        "Initial public release of the consolidated pack",
-        "Unified naming scheme across all vehicles"
+        "Small bugfix on two of the cars",
+        "Unified naming scheme across all vehicle files"
       ]
     }
   ]

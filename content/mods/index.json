@@ -9,20 +9,11 @@
     "isPaid": false,
     "coverImage": "mmcp/cover.jpg"
   },
+  
   {
-    "id": "mini-rally-legends",
-    "name": "Mini's Rally Legends",
-    "slug": "mini-rally-legends",
-    "tagline": "24 stage-bred rally icons. Suspension tuned. Telemetry verified.",
-    "featured": false,
-    "starred": true,
-    "isPaid": true,
-    "coverImage": "rally/cover.jpg"
-  },
-  {
-    "id": "mini-traffic-suite",
-    "name": "Mini's Traffic Suite",
-    "slug": "mini-traffic-suite",
+    "id": "mini-traffic-pack",
+    "name": "Mini's Traffic Pack (Comming soon)",
+    "slug": "mini-traffic-pack",
     "tagline": "AI-ready civilian vehicles for dense city maps. Lightweight, stable.",
     "featured": false,
     "starred": false,
