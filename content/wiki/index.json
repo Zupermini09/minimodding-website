@@ -14,5 +14,13 @@
     "summary": "Fixes for missing textures, broken configs, and crashes after installing a pack.",
     "category": "Support",
     "updated": "2026-06-08"
+  },
+  {
+    "id": "beamng-map-making",
+    "title": "Making a BeamNG.drive Map From Scratch",
+    "slug": "beamng-map-making",
+    "summary": "Full walkthrough covering terrain generation, file setup, roads, meshes, foliage, tunnels, animations, and publishing.",
+    "category": "Map Making",
+    "updated": "2026-06-08"
   }
 ]
