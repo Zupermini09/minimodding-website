@@ -17,7 +17,7 @@ export default function Home() {
           aria-hidden="true"
         />
         <div className="relative py-28 sm:py-40">
-          <p className="label text-accent">BeamNG.drive — Mod Index</p>
+          <p className="label text-accent">BeamNG.drive — Minimodding</p>
 
           <h1 className="mt-7 max-w-3xl text-5xl font-bold leading-[1.04] tracking-tight text-foreground sm:text-7xl">
             Precision-built mod packs for BeamNG.drive.
@@ -34,7 +34,7 @@ export default function Home() {
               href="/mods"
               className="group inline-flex items-center gap-2.5 rounded-full bg-accent px-7 py-3.5 text-sm font-semibold text-background transition-colors hover:bg-accent-strong"
             >
-              Browse the index
+              Browse mods
               <ArrowRight
                 size={17}
                 className="transition-transform group-hover:translate-x-0.5"

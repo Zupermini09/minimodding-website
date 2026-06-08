@@ -11,7 +11,7 @@ export default function Navbar() {
         </Link>
 
         <div className="flex items-center gap-1">
-          <NavLink href="/">Index</NavLink>
+          <NavLink href="/">Home</NavLink>
           <NavLink href="/mods">Mods</NavLink>
           <span className="ml-1">
             <ThemeToggle />

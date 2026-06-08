@@ -13,7 +13,7 @@ export default function ModsPage() {
   return (
     <div className="mx-auto max-w-6xl px-6 sm:px-8">
       <header className="py-16 sm:py-24">
-        <p className="label text-accent">Index</p>
+        <p className="label text-accent">Mods</p>
         <div className="mt-4 flex flex-wrap items-end justify-between gap-4">
           <h1 className="text-5xl font-bold tracking-tight text-foreground sm:text-6xl">
             Mods

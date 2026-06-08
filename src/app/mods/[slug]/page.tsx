@@ -50,7 +50,7 @@ export default async function ModPage({
           className="label inline-flex items-center gap-2 text-muted transition-colors hover:text-foreground"
         >
           <ArrowLeft size={14} />
-          Index
+          Mods
         </Link>
       </div>
 
