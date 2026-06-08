@@ -1,0 +1,58 @@
+{
+  "id": "mini-mega-car-pack",
+  "name": "Mini's Mega Car Pack",
+  "slug": "mini-mega-car-pack",
+  "tagline": "130+ cars. Every one tested. Every one configured.",
+  "featured": true,
+  "isPaid": false,
+  "starred": true,
+  "game": "BeamNG.drive",
+  "coverImage": "mmcp/cover.jpg",
+  "images": [
+    "mmcp/cover.jpg",
+    "mmcp/shot1.jpg",
+    "mmcp/shot2.jpg",
+    "mmcp/shot3.jpg"
+  ],
+  "description": "The most curated car pack for BeamNG.drive. Every vehicle is individually tested, configured from scratch, and given custom thumbnails. No broken mods. No filler — just 130+ vehicles that load clean, drive right, and sit correctly in the spawn menu.",
+  "downloads": [
+    {
+      "label": "Free Download (Lite Version)",
+      "url": "https://modsfire.com/yourlink",
+      "type": "free"
+    },
+    {
+      "label": "Subscriber Download (Full Pack)",
+      "url": "https://drive.google.com/yourlink",
+      "type": "paid"
+    }
+  ],
+  "changelogs": [
+    {
+      "version": "2.5",
+      "date": "2025-06-08",
+      "notes": [
+        "Added 15 new vehicles",
+        "Replaced broken Trabant 601 with working alternative",
+        "Custom thumbnails for all 130 cars",
+        "All default presets removed — custom configs for every car"
+      ]
+    },
+    {
+      "version": "2.4",
+      "date": "2024-12-01",
+      "notes": [
+        "Added Porsche and Volvo packs",
+        "Fixed config issues on 8 vehicles"
+      ]
+    },
+    {
+      "version": "2.3",
+      "date": "2024-08-14",
+      "notes": [
+        "Initial public release of the consolidated pack",
+        "Unified naming scheme across all vehicles"
+      ]
+    }
+  ]
+}

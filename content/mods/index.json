@@ -1,0 +1,32 @@
+[
+  {
+    "id": "mini-mega-car-pack",
+    "name": "Mini's Mega Car Pack",
+    "slug": "mini-mega-car-pack",
+    "tagline": "130+ cars. Every one tested. Every one configured.",
+    "featured": true,
+    "starred": true,
+    "isPaid": false,
+    "coverImage": "mmcp/cover.jpg"
+  },
+  {
+    "id": "mini-rally-legends",
+    "name": "Mini's Rally Legends",
+    "slug": "mini-rally-legends",
+    "tagline": "24 stage-bred rally icons. Suspension tuned. Telemetry verified.",
+    "featured": false,
+    "starred": true,
+    "isPaid": true,
+    "coverImage": "rally/cover.jpg"
+  },
+  {
+    "id": "mini-traffic-suite",
+    "name": "Mini's Traffic Suite",
+    "slug": "mini-traffic-suite",
+    "tagline": "AI-ready civilian vehicles for dense city maps. Lightweight, stable.",
+    "featured": false,
+    "starred": false,
+    "isPaid": false,
+    "coverImage": "traffic/cover.jpg"
+  }
+]

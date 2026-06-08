@@ -1,0 +1,50 @@
+{
+  "id": "mini-rally-legends",
+  "name": "Mini's Rally Legends",
+  "slug": "mini-rally-legends",
+  "tagline": "24 stage-bred rally icons. Suspension tuned. Telemetry verified.",
+  "featured": false,
+  "isPaid": true,
+  "starred": true,
+  "game": "BeamNG.drive",
+  "coverImage": "rally/cover.jpg",
+  "images": [
+    "rally/cover.jpg",
+    "rally/gravel.jpg",
+    "rally/snow.jpg"
+  ],
+  "description": "A focused collection of homologation-era rally machines, each with a hand-built gravel and tarmac config. Differentials, dampers, and gear ratios are dialled per car against real stage data — no copy-paste tunes. Built for sideways commitment and repeatable stage times.",
+  "downloads": [
+    {
+      "label": "Subscriber Download (Google Drive)",
+      "url": "https://drive.google.com/yourlink",
+      "type": "paid"
+    }
+  ],
+  "changelogs": [
+    {
+      "version": "1.3",
+      "date": "2025-04-22",
+      "notes": [
+        "Added 4 Group B-inspired builds",
+        "Reworked gravel suspension travel across the pack",
+        "Fixed handbrake binding on 3 vehicles"
+      ]
+    },
+    {
+      "version": "1.2",
+      "date": "2025-01-09",
+      "notes": [
+        "Snow/ice tyre configs added for every car",
+        "Reduced engine thermal failures on long stages"
+      ]
+    },
+    {
+      "version": "1.0",
+      "date": "2024-10-30",
+      "notes": [
+        "Initial subscriber release with 18 vehicles"
+      ]
+    }
+  ]
+}

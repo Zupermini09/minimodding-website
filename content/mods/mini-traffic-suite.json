@@ -1,0 +1,40 @@
+{
+  "id": "mini-traffic-suite",
+  "name": "Mini's Traffic Suite",
+  "slug": "mini-traffic-suite",
+  "tagline": "AI-ready civilian vehicles for dense city maps. Lightweight, stable.",
+  "featured": false,
+  "isPaid": false,
+  "starred": false,
+  "game": "BeamNG.drive",
+  "coverImage": "traffic/cover.jpg",
+  "images": [
+    "traffic/cover.jpg",
+    "traffic/intersection.jpg"
+  ],
+  "description": "A set of low-overhead civilian cars purpose-built for the BeamNG traffic system. Each vehicle is stripped of unnecessary jbeam complexity so you can spawn a full intersection without tanking your frame rate, while still keeping believable crash behaviour.",
+  "downloads": [
+    {
+      "label": "Free Download (Modsfire)",
+      "url": "https://modsfire.com/yourlink",
+      "type": "free"
+    }
+  ],
+  "changelogs": [
+    {
+      "version": "1.1",
+      "date": "2025-03-15",
+      "notes": [
+        "Lowered LOD distances for better traffic-density performance",
+        "Added 3 van and delivery variants"
+      ]
+    },
+    {
+      "version": "1.0",
+      "date": "2025-02-02",
+      "notes": [
+        "Initial release with 9 traffic-optimised vehicles"
+      ]
+    }
+  ]
+}
