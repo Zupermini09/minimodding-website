@@ -1,7 +1,7 @@
 {
-  "id": "mini-traffic-suite",
-  "name": "Mini's Traffic Suite",
-  "slug": "mini-traffic-suite",
+  "id": "mini-traffic-pack",
+  "name": "Mini's Traffic Pack",
+  "slug": "mini-traffic-pack",
   "tagline": "AI-ready civilian vehicles for dense city maps. Lightweight, stable.",
   "featured": false,
   "isPaid": false,
