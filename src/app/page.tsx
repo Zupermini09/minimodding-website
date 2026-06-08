@@ -48,7 +48,7 @@ export default function Home() {
       </section>
 
       {/* Spec strip */}
-      <section className="grid grid-cols-1 gap-px overflow-hidden rounded-3xl border border-line bg-line sm:grid-cols-3">
+      <section className="grid grid-cols-1 gap-[1.5px] overflow-hidden rounded-3xl border-[1.5px] border-line bg-line-strong sm:grid-cols-3">
         {[
           ["Tested", "Every config driven before release"],
           ["Configured", "Custom presets, no defaults left in"],
@@ -76,7 +76,7 @@ export default function Home() {
 
           <Link
             href={`/mods/${featured.slug}`}
-            className="group grid grid-cols-1 overflow-hidden rounded-3xl border border-line bg-surface shadow-card transition-all duration-300 hover:border-line-strong hover:shadow-2xl hover:shadow-black/5 lg:grid-cols-2"
+            className="group grid grid-cols-1 overflow-hidden rounded-3xl border-[1.5px] border-line bg-surface shadow-card transition-all duration-300 hover:border-line-strong hover:shadow-2xl hover:shadow-black/5 lg:grid-cols-2"
           >
             <div className="relative aspect-[16/10] overflow-hidden lg:aspect-auto lg:min-h-[26rem]">
               <SmartImage

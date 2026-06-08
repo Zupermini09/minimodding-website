@@ -65,8 +65,8 @@ export default async function ModPage({
             </span>
           )}
           <span
-            className={`label rounded-full border px-3 py-1.5 ${
-              mod.isPaid ? "border-gold/40 text-gold" : "border-line-strong text-muted"
+            className={`label rounded-full border-[1.5px] px-3 py-1.5 ${
+              mod.isPaid ? "border-gold/50 text-gold" : "border-line-strong text-muted"
             }`}
           >
             {mod.isPaid ? "Subscriber" : "Free"}
@@ -95,7 +95,7 @@ export default async function ModPage({
           </p>
         </section>
 
-        <aside className="rounded-3xl border border-line bg-surface shadow-card p-7">
+        <aside className="rounded-3xl border-[1.5px] border-line bg-surface shadow-card p-7">
           <p className="label text-accent">Download</p>
           <div className="mt-5 flex flex-col gap-3">
             {mod.downloads.map((download) => (

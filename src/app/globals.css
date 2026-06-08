@@ -15,9 +15,9 @@
   --foreground: #0f0f0f;
   /* Darker muted grey so secondary text still clears ~7:1 on white. */
   --muted: #57544c;
-  /* Visible hairline + a clearly darker strong border. */
-  --line: #d9d4c7;
-  --line-strong: #b7b09e;
+  /* Clearly visible hairline + a noticeably darker strong border. */
+  --line: #c7c0ac;
+  --line-strong: #998f76;
   /* Deeper, richer amber so it reads with weight on light surfaces. */
   --accent: #b45309;
   --accent-strong: #8a3d06;
@@ -34,8 +34,8 @@
   --surface-2: #20242f;
   --foreground: #e8eaf0;
   --muted: #8b909e;
-  --line: #272c37;
-  --line-strong: #363c49;
+  --line: #3a4150;
+  --line-strong: #515a6c;
   --accent: #f0a92b;
   --accent-strong: #ffc463;
   --gold: #f4b829;

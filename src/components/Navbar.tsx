@@ -4,7 +4,7 @@ import ThemeToggle from "@/components/ThemeToggle";
 
 export default function Navbar() {
   return (
-    <header className="sticky top-0 z-50 bg-background/70 backdrop-blur-xl">
+    <header className="sticky top-0 z-50 border-b-[1.5px] border-line bg-background/70 backdrop-blur-xl">
       <nav className="mx-auto flex h-20 max-w-6xl items-center justify-between gap-8 px-6 sm:px-8">
         <Link href="/" aria-label="MiniModding home" className="flex items-center">
           <BrandLogo />

@@ -16,7 +16,7 @@ export default function ModCard({ mod, index }: ModCardProps) {
   return (
     <Link
       href={`/mods/${mod.slug}`}
-      className="group relative flex flex-col overflow-hidden rounded-3xl border border-line bg-surface shadow-card transition-all duration-300 hover:-translate-y-1.5 hover:border-line-strong hover:shadow-2xl hover:shadow-black/5"
+      className="group relative flex flex-col overflow-hidden rounded-3xl border-[1.5px] border-line bg-surface shadow-card transition-all duration-300 hover:-translate-y-1.5 hover:border-line-strong hover:shadow-2xl hover:shadow-black/5"
     >
       {/* Cover */}
       <div className="relative aspect-[16/10] overflow-hidden">
@@ -68,13 +68,13 @@ export default function ModCard({ mod, index }: ModCardProps) {
 function StatusTag({ paid }: { paid?: boolean }) {
   if (paid) {
     return (
-      <span className="label rounded-full border border-gold/40 px-3 py-1.5 text-gold">
+      <span className="label rounded-full border-[1.5px] border-gold/50 px-3 py-1.5 text-gold">
         Subscriber
       </span>
     );
   }
   return (
-    <span className="label rounded-full border border-line-strong px-3 py-1.5 text-muted">
+    <span className="label rounded-full border-[1.5px] border-line-strong px-3 py-1.5 text-muted">
       Free
     </span>
   );

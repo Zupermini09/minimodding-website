@@ -34,13 +34,13 @@ export default function ImageCarousel({ images, alt }: ImageCarouselProps) {
 
   if (count === 0) {
     return (
-      <div className="aspect-[16/9] w-full rounded-3xl border border-line bg-surface-2" />
+      <div className="aspect-[16/9] w-full rounded-3xl border-[1.5px] border-line bg-surface-2" />
     );
   }
 
   return (
     <div className="flex flex-col gap-5">
-      <div className="group relative aspect-[16/9] w-full overflow-hidden rounded-3xl border border-line bg-surface-2">
+      <div className="group relative aspect-[16/9] w-full overflow-hidden rounded-3xl border-[1.5px] border-line bg-surface-2">
         <SmartImage
           key={index}
           src={storageUrl(images[index])}
