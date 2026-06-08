@@ -11,9 +11,12 @@ const nextConfig: NextConfig = {
   output: "export",
   // Emit `/route/index.html` so GitHub Pages resolves clean URLs.
   trailingSlash: true,
-  // Serve under the repo sub-path in production. `basePath` also sets the
-  // asset prefix for `_next/*`, and next/link + next/image prefix automatically.
+  // Serve under the repo sub-path in production. `basePath` already prefixes
+  // `_next/*` assets and next/link + next/image; `assetPrefix` is set to the
+  // same value as a belt-and-suspenders guard so static assets resolve under
+  // the GitHub Pages sub-path even if a CDN/host strips basePath from assets.
   basePath,
+  assetPrefix: basePath,
   images: {
     // No optimization server exists in a static export.
     unoptimized: true,
