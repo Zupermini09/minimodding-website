@@ -1,0 +1,9 @@
+{
+  "id": "troubleshooting",
+  "title": "Troubleshooting & Common Issues",
+  "slug": "troubleshooting",
+  "summary": "Fixes for missing textures, broken configs, and crashes after installing a pack.",
+  "category": "Support",
+  "updated": "2026-06-08",
+  "body": "Most issues come from leftover files or an extracted zip. Work through these in order.\n\n## Missing or pink textures\n\nPink (magenta) surfaces mean the game can't find a texture file. Almost always this is because the mod was **extracted** instead of left as a `.zip`.\n\n- Delete the extracted folder from your `mods/` directory.\n- Re-add the original `.zip` without unpacking it.\n- Clear the cache (see below).\n\n## Vehicles don't appear\n\n1. Confirm the `.zip` is in the correct version folder, e.g. `Documents/BeamNG.drive/0.32/mods/`.\n2. Make sure mods are enabled in the **Mod Manager**.\n3. Check that the file wasn't blocked by Windows — right-click the zip, *Properties*, then *Unblock*.\n\n## Clearing the cache\n\nA stale cache causes many phantom problems. To clear it:\n\n- Open the main menu, then go to **Options → Other**.\n- Click **Clear cache** and restart the game.\n\n## Crashes on load\n\nIf the game crashes while loading a vehicle:\n\n- Remove other vehicle mods to rule out a conflict.\n- Verify you're on a supported game version — each pack lists its tested version on its [mod page](/mods).\n\nIf none of this helps, reach out and include your game version and the pack name."
+}

@@ -1,0 +1,9 @@
+{
+  "id": "installing-mods",
+  "title": "Installing Mods in BeamNG.drive",
+  "slug": "installing-mods",
+  "summary": "Step-by-step guide to installing MiniModding packs manually and via the in-game repository.",
+  "category": "Getting Started",
+  "updated": "2026-06-08",
+  "body": "Every MiniModding pack ships as a single `.zip` file. You don't need to unpack it — BeamNG.drive reads mods directly from the zip.\n\n## Manual installation\n\nThis is the most reliable method and works for every pack on the site.\n\n1. Download the pack's `.zip` from its [mod page](/mods).\n2. Open the BeamNG mods folder. On Windows it lives at:\n   `Documents/BeamNG.drive/<version>/mods/`\n3. Drop the `.zip` into that folder — **do not extract it**.\n4. Launch the game. The vehicles appear under the *Mods* category in the vehicle selector.\n\n> Tip: keep the original zip name. Renaming it is fine, but extracting it will break texture and config paths.\n\n## In-game repository\n\nFor packs published to the official repository:\n\n- Open **Repository** from the main menu.\n- Search for the pack name.\n- Click **Subscribe** — the game downloads and activates it automatically.\n\n## Updating a pack\n\nWhen a new version drops, delete the old `.zip` first, then add the new one. Leaving both in the mods folder can cause duplicate vehicles or config conflicts.\n\nStill stuck? Head to [Troubleshooting](/wiki/troubleshooting)."
+}

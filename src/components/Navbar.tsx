@@ -13,6 +13,7 @@ export default function Navbar() {
         <div className="flex items-center gap-1">
           <NavLink href="/">Home</NavLink>
           <NavLink href="/mods">Mods</NavLink>
+          <NavLink href="/wiki">Wiki</NavLink>
           <span className="ml-1">
             <ThemeToggle />
           </span>
