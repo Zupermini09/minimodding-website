@@ -14,17 +14,17 @@ export default function WikiCard({ article, index }: WikiCardProps) {
   return (
     <Link
       href={`/wiki/${article.slug}`}
-      className="group relative flex flex-col gap-4 rounded-3xl border-[1.5px] border-line bg-surface shadow-card p-7 transition-all duration-300 hover:-translate-y-1.5 hover:border-line-strong hover:shadow-2xl hover:shadow-black/5"
+      className="group relative flex flex-col gap-4 rounded-3xl border-[1.5px] border-line bg-surface p-7 shadow-card transition-all duration-300 hover:-translate-y-1.5 hover:border-line-strong hover:shadow-card-hover"
     >
       <div className="flex items-center justify-between gap-3">
         <span className="label text-muted">{number}</span>
-        <span className="label rounded-full border-[1.5px] border-line-strong px-3 py-1.5 text-muted">
+        <span className="label rounded-full border-[1.5px] border-line-strong bg-surface-2/50 px-3 py-1.5 text-muted">
           {article.category}
         </span>
       </div>
 
       <div className="flex items-start justify-between gap-3">
-        <h3 className="text-xl font-semibold leading-tight tracking-tight text-foreground">
+        <h3 className="font-display text-xl font-semibold leading-tight tracking-tight text-foreground">
           {article.title}
         </h3>
         <ArrowUpRight

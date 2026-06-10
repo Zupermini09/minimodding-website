@@ -31,7 +31,7 @@ export default function ChangelogAccordion({ changelogs }: ChangelogAccordionPro
           type="button"
           onClick={() => setExpanded((v) => !v)}
           aria-expanded={expanded}
-          className="group flex items-center gap-2 self-start rounded-full border-[1.5px] border-line px-4 py-2.5 text-muted transition-colors hover:bg-surface hover:text-foreground"
+          className="group flex items-center gap-2 self-start rounded-full border-[1.5px] border-line bg-surface px-4 py-2.5 text-muted shadow-card transition-all hover:border-line-strong hover:text-foreground hover:shadow-card-hover"
         >
           <span className="label">
             {expanded

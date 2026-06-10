@@ -40,7 +40,7 @@ export default function ImageCarousel({ images, alt }: ImageCarouselProps) {
 
   return (
     <div className="flex flex-col gap-5">
-      <div className="group relative aspect-[16/9] w-full overflow-hidden rounded-3xl border-[1.5px] border-line bg-surface-2">
+      <div className="group relative aspect-[16/9] w-full overflow-hidden rounded-3xl border-[1.5px] border-line bg-surface-2 shadow-card">
         <SmartImage
           key={index}
           src={storageUrl(images[index])}

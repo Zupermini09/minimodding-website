@@ -1,0 +1,27 @@
+{
+  "title": "About MiniModding",
+  "intro": "One person, one game, and an unreasonable amount of time spent making BeamNG.drive mods actually work.",
+  "sections": [
+    {
+      "heading": "Who I am",
+      "paragraphs": [
+        "Hi, I'm Mini — a BeamNG.drive enthusiast who got tired of downloading mod packs full of broken vehicles, missing textures, and default configs nobody bothered to set up.",
+        "I build, test, and maintain every pack on this site myself. If a mod is listed here, it means I've personally driven it, configured it, and decided it's worth your disk space."
+      ]
+    },
+    {
+      "heading": "What is MiniModding?",
+      "paragraphs": [
+        "MiniModding is a small, curated catalogue of mod packs for BeamNG.drive. The focus is quality over quantity: every vehicle is individually tested, given proper configurations, and shipped with custom thumbnails so your vehicle selector stays clean.",
+        "Most packs are free. Subscriber packs help fund the time it takes to keep everything tested and up to date — and subscribers get the bigger, more ambitious releases."
+      ]
+    },
+    {
+      "heading": "The modding process",
+      "paragraphs": [
+        "Every pack starts with a long testing phase: each vehicle is loaded, driven, and checked for broken Jbeams, missing materials, and performance problems. Anything that doesn't hold up gets fixed or replaced — never shipped.",
+        "After testing comes configuration: sensible default setups, custom presets where it makes sense, and consistent thumbnails. Then the pack is bundled, versioned, and documented in the changelog before release."
+      ]
+    }
+  ]
+}

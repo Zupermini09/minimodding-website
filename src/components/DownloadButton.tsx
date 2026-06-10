@@ -14,7 +14,7 @@ export default function DownloadButton({ download }: { download: ModDownload }) 
     "group flex items-center justify-between gap-4 rounded-2xl px-5 py-3.5 transition-all";
   const variant = isPaid
     ? "border-[1.5px] border-gold/50 text-foreground hover:border-gold hover:bg-gold/10"
-    : "bg-accent text-background hover:bg-accent-strong";
+    : "bg-accent text-background shadow-glow hover:bg-accent-strong hover:shadow-glow-hover";
 
   return (
     <a

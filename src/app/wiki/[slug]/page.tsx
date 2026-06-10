@@ -60,7 +60,7 @@ export default async function WikiArticlePage({
           <span className="label text-muted">Updated {updated}</span>
         </div>
 
-        <h1 className="mt-6 text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
+        <h1 className="text-display mt-6 text-4xl font-bold tracking-tight sm:text-5xl">
           {article.title}
         </h1>
         <p className="mt-5 max-w-2xl font-mono text-sm leading-relaxed text-muted sm:text-base">

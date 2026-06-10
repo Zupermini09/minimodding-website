@@ -3,44 +3,83 @@
 /* next-themes uses attribute="class"; drive dark: variants off the .dark class. */
 @custom-variant dark (&:where(.dark, .dark *));
 
-/* ---- Light theme: clean warm white ---- */
+/* ---- Light theme: warm paper white ---- */
 :root {
-  /* Off-white page so pure-white cards visibly lift off it. */
-  --background: #f8f7f4;
-  /* Cards are pure white + a soft shadow (see --card-shadow). */
+  /* Warm off-white page so pure-white cards visibly lift off it. */
+  --background: #f6f5f1;
+  /* Cards are pure white + layered shadows (see --card-shadow). */
   --surface: #ffffff;
   /* Recessed wells (image placeholders, thumbs) read slightly darker. */
-  --surface-2: #ececdf;
+  --surface-2: #edebe2;
   /* Near-black text, not dark grey. */
-  --foreground: #0f0f0f;
+  --foreground: #121110;
   /* Darker muted grey so secondary text still clears ~7:1 on white. */
   --muted: #57544c;
-  /* Clearly visible hairline + a noticeably darker strong border. */
-  --line: #c7c0ac;
+  /* Visible hairline + a noticeably darker strong border. */
+  --line: #d9d4c4;
   --line-strong: #998f76;
   /* Deeper, richer amber so it reads with weight on light surfaces. */
   --accent: #b45309;
   --accent-strong: #8a3d06;
   --gold: #a16207;
-  /* Soft resting shadow that gives white cards definition. */
-  --card-shadow: 0 1px 2px rgba(17, 17, 17, 0.05), 0 6px 20px rgba(17, 17, 17, 0.06);
+  /* Layered resting shadow that gives white cards real depth. */
+  --card-shadow:
+    0 1px 2px rgba(18, 16, 10, 0.05),
+    0 4px 10px rgba(18, 16, 10, 0.04),
+    0 12px 32px rgba(18, 16, 10, 0.07);
+  --card-shadow-hover:
+    0 2px 4px rgba(18, 16, 10, 0.06),
+    0 8px 18px rgba(18, 16, 10, 0.07),
+    0 24px 52px rgba(18, 16, 10, 0.13);
+  /* Amber halo for primary CTAs. */
+  --glow-shadow:
+    0 2px 6px rgba(180, 83, 9, 0.25),
+    0 8px 24px rgba(180, 83, 9, 0.18);
+  --glow-shadow-hover:
+    0 2px 8px rgba(180, 83, 9, 0.3),
+    0 10px 32px rgba(180, 83, 9, 0.28);
+  /* Amber wash behind the hero. */
+  --hero-glow: radial-gradient(
+    ellipse 60% 55% at 28% 12%,
+    rgba(180, 83, 9, 0.1),
+    transparent 70%
+  );
   color-scheme: light;
 }
 
-/* ---- Dark theme: deep slate (default) ---- */
+/* ---- Dark theme: lifted charcoal (default) ---- */
 .dark {
-  --background: #0f1117;
-  --surface: #181c24;
-  --surface-2: #20242f;
-  --foreground: #e8eaf0;
-  --muted: #8b909e;
-  --line: #3a4150;
-  --line-strong: #515a6c;
+  /* Lifted charcoal, never pitch black — cards still need room to sit above it. */
+  --background: #1a1c22;
+  --surface: #23262e;
+  --surface-2: #2c3039;
+  --foreground: #eceef3;
+  --muted: #9aa0ad;
+  --line: #343945;
+  --line-strong: #4d5465;
   --accent: #f0a92b;
   --accent-strong: #ffc463;
   --gold: #f4b829;
-  /* Dark cards already separate by lightness — no resting shadow needed. */
-  --card-shadow: 0 0 0 0 transparent;
+  /* Inset top highlight + layered drop shadows so cards read clearly lifted. */
+  --card-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.05),
+    0 1px 2px rgba(0, 0, 0, 0.4),
+    0 10px 28px rgba(0, 0, 0, 0.32);
+  --card-shadow-hover:
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    0 2px 4px rgba(0, 0, 0, 0.45),
+    0 22px 52px rgba(0, 0, 0, 0.5);
+  --glow-shadow:
+    0 0 0 1px rgba(240, 169, 43, 0.12),
+    0 4px 20px rgba(240, 169, 43, 0.22);
+  --glow-shadow-hover:
+    0 0 0 1px rgba(255, 196, 99, 0.2),
+    0 6px 28px rgba(240, 169, 43, 0.34);
+  --hero-glow: radial-gradient(
+    ellipse 60% 55% at 28% 12%,
+    rgba(240, 169, 43, 0.09),
+    transparent 70%
+  );
   color-scheme: dark;
 }
 
@@ -55,9 +94,14 @@
   --color-accent: var(--accent);
   --color-accent-strong: var(--accent-strong);
   --color-gold: var(--gold);
-  /* Theme-aware card shadow — `shadow-card` utility. */
+  /* Theme-aware shadows — `shadow-card`, `shadow-card-hover`, `shadow-glow`. */
   --shadow-card: var(--card-shadow);
-  --font-sans: var(--font-space-grotesk);
+  --shadow-card-hover: var(--card-shadow-hover);
+  --shadow-glow: var(--glow-shadow);
+  --shadow-glow-hover: var(--glow-shadow-hover);
+  /* Inter for running text, Space Grotesk for display, JetBrains for technical. */
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-space-grotesk);
   --font-mono: var(--font-jetbrains-mono);
 }
 
@@ -96,6 +140,24 @@ body {
   background-size: 72px 72px;
   -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 30%, transparent 75%);
   mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 30%, transparent 75%);
+}
+
+/* Soft amber wash layered behind hero sections. */
+.hero-glow {
+  background-image: var(--hero-glow);
+}
+
+/* Display headings: vertical fade from full foreground into a softer tone. */
+.text-display {
+  font-family: var(--font-display), ui-sans-serif, sans-serif;
+  background-image: linear-gradient(
+    to bottom,
+    var(--foreground) 55%,
+    color-mix(in srgb, var(--foreground) 62%, var(--background))
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 /* Focus ring tuned to the accent. */

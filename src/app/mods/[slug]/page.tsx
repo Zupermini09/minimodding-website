@@ -6,6 +6,7 @@ import { getMod, getModSlugs, sortChangelogs } from "@/lib/mods";
 import ImageCarousel from "@/components/ImageCarousel";
 import ChangelogAccordion from "@/components/ChangelogAccordion";
 import DownloadButton from "@/components/DownloadButton";
+import SubscribeButton from "@/components/SubscribeButton";
 
 // Static export: only the slugs returned here are built; nothing is dynamic.
 export const dynamicParams = false;
@@ -55,30 +56,38 @@ export default async function ModPage({
       </div>
 
       {/* Title block */}
-      <header>
-        <div className="flex flex-wrap items-center gap-3">
-          <span className="label text-muted">{mod.game}</span>
-          {mod.starred && (
-            <span className="flex items-center gap-1.5">
-              <Star size={12} className="fill-gold text-gold" />
-              <span className="label text-gold">Pinned</span>
+      <header className="relative">
+        <div
+          className="hero-glow pointer-events-none absolute -inset-x-8 -inset-y-12"
+          aria-hidden="true"
+        />
+        <div className="relative">
+          <div className="flex flex-wrap items-center gap-3">
+            <span className="label text-muted">{mod.game}</span>
+            {mod.starred && (
+              <span className="flex items-center gap-1.5">
+                <Star size={12} className="fill-gold text-gold" />
+                <span className="label text-gold">Pinned</span>
+              </span>
+            )}
+            <span
+              className={`label rounded-full border-[1.5px] px-3 py-1.5 ${
+                mod.isPaid
+                  ? "border-gold/50 bg-gold/10 text-gold"
+                  : "border-line-strong bg-surface text-muted"
+              }`}
+            >
+              {mod.isPaid ? "Subscriber" : "Free"}
             </span>
-          )}
-          <span
-            className={`label rounded-full border-[1.5px] px-3 py-1.5 ${
-              mod.isPaid ? "border-gold/50 text-gold" : "border-line-strong text-muted"
-            }`}
-          >
-            {mod.isPaid ? "Subscriber" : "Free"}
-          </span>
-        </div>
+          </div>
 
-        <h1 className="mt-6 text-4xl font-bold tracking-tight text-foreground sm:text-6xl">
-          {mod.name}
-        </h1>
-        <p className="mt-5 max-w-2xl font-mono text-sm leading-relaxed text-muted sm:text-base">
-          {mod.tagline}
-        </p>
+          <h1 className="text-display mt-6 text-4xl font-bold tracking-tight sm:text-6xl">
+            {mod.name}
+          </h1>
+          <p className="mt-5 max-w-2xl font-mono text-sm leading-relaxed text-muted sm:text-base">
+            {mod.tagline}
+          </p>
+        </div>
       </header>
 
       {/* Carousel */}
@@ -95,12 +104,20 @@ export default async function ModPage({
           </p>
         </section>
 
-        <aside className="rounded-3xl border-[1.5px] border-line bg-surface shadow-card p-7">
+        <aside className="h-fit rounded-3xl border-[1.5px] border-line bg-surface p-7 shadow-card">
           <p className="label text-accent">Download</p>
           <div className="mt-5 flex flex-col gap-3">
             {mod.downloads.map((download) => (
               <DownloadButton key={download.url} download={download} />
             ))}
+          </div>
+
+          {/* Subscriber CTA */}
+          <div className="mt-7 border-t-[1.5px] border-line pt-6">
+            <p className="text-sm leading-relaxed text-muted">
+              Want the subscriber-only packs and to support new releases?
+            </p>
+            <SubscribeButton className="mt-4 w-full" />
           </div>
         </aside>
       </div>

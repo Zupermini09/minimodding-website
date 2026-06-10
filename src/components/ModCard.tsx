@@ -16,7 +16,7 @@ export default function ModCard({ mod, index }: ModCardProps) {
   return (
     <Link
       href={`/mods/${mod.slug}`}
-      className="group relative flex flex-col overflow-hidden rounded-3xl border-[1.5px] border-line bg-surface shadow-card transition-all duration-300 hover:-translate-y-1.5 hover:border-line-strong hover:shadow-2xl hover:shadow-black/5"
+      className="group relative flex flex-col overflow-hidden rounded-3xl border-[1.5px] border-line bg-surface shadow-card transition-all duration-300 hover:-translate-y-1.5 hover:border-line-strong hover:shadow-card-hover"
     >
       {/* Cover */}
       <div className="relative aspect-[16/10] overflow-hidden">
@@ -24,6 +24,10 @@ export default function ModCard({ mod, index }: ModCardProps) {
           src={storageUrl(mod.coverImage)}
           alt={`${mod.name} cover`}
           className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+        />
+        <div
+          className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-50 transition-opacity duration-300 group-hover:opacity-70"
+          aria-hidden="true"
         />
 
         <span className="label absolute left-4 top-4 rounded-full bg-background/75 px-2.5 py-1.5 text-muted backdrop-blur-md">
@@ -44,7 +48,7 @@ export default function ModCard({ mod, index }: ModCardProps) {
       {/* Body */}
       <div className="flex flex-1 flex-col gap-4 p-7">
         <div className="flex items-start justify-between gap-3">
-          <h3 className="text-xl font-semibold leading-tight tracking-tight text-foreground">
+          <h3 className="font-display text-xl font-semibold leading-tight tracking-tight text-foreground">
             {mod.name}
           </h3>
           <ArrowUpRight
@@ -68,13 +72,13 @@ export default function ModCard({ mod, index }: ModCardProps) {
 function StatusTag({ paid }: { paid?: boolean }) {
   if (paid) {
     return (
-      <span className="label rounded-full border-[1.5px] border-gold/50 px-3 py-1.5 text-gold">
+      <span className="label rounded-full border-[1.5px] border-gold/50 bg-gold/10 px-3 py-1.5 text-gold">
         Subscriber
       </span>
     );
   }
   return (
-    <span className="label rounded-full border-[1.5px] border-line-strong px-3 py-1.5 text-muted">
+    <span className="label rounded-full border-[1.5px] border-line-strong bg-surface-2/50 px-3 py-1.5 text-muted">
       Free
     </span>
   );
