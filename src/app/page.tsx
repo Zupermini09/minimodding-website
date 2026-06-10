@@ -1,13 +1,15 @@
 import Link from "next/link";
 import { ArrowRight, Star, Wrench, SlidersHorizontal, BadgeCheck } from "lucide-react";
-import { getFeaturedMod, getModSummaries } from "@/lib/mods";
+import { getFeaturedMod, getLatestUpdates, getModSummaries } from "@/lib/mods";
 import { storageUrl } from "@/lib/supabase";
+import { formatDate } from "@/lib/site";
 import SmartImage from "@/components/SmartImage";
 import SubscribeButton from "@/components/SubscribeButton";
 
 export default function Home() {
   const featured = getFeaturedMod();
   const total = getModSummaries().length;
+  const updates = getLatestUpdates();
 
   return (
     <div className="mx-auto max-w-6xl px-6 sm:px-8">
@@ -121,6 +123,42 @@ export default function Home() {
               </span>
             </div>
           </Link>
+        </section>
+      )}
+
+      {/* Latest updates */}
+      {updates.length > 0 && (
+        <section className="mt-24">
+          <p className="label mb-6 text-muted">Latest updates</p>
+
+          <div className="flex flex-col gap-[1.5px] overflow-hidden rounded-3xl border-[1.5px] border-line bg-line shadow-card">
+            {updates.map((update) => (
+              <Link
+                key={`${update.slug}-${update.version}`}
+                href={`/mods/${update.slug}`}
+                className="group flex flex-wrap items-baseline gap-x-4 gap-y-2 bg-surface px-8 py-7 transition-colors hover:bg-surface-2/60"
+              >
+                <span className="font-mono text-base font-semibold text-accent">
+                  v{update.version}
+                </span>
+                <span className="font-display text-base font-semibold text-foreground">
+                  {update.name}
+                </span>
+                <time dateTime={update.date} className="label text-muted">
+                  {formatDate(update.date)}
+                </time>
+                {update.highlight && (
+                  <span className="w-full text-sm leading-relaxed text-muted sm:w-auto sm:flex-1 sm:truncate">
+                    {update.highlight}
+                  </span>
+                )}
+                <ArrowRight
+                  size={16}
+                  className="ml-auto shrink-0 self-center text-muted transition-transform group-hover:translate-x-1 group-hover:text-accent"
+                />
+              </Link>
+            ))}
+          </div>
         </section>
       )}
 

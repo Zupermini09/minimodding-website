@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Space_Grotesk, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import { SITE_URL } from "@/lib/site";
 import Providers from "@/components/Providers";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -24,13 +25,26 @@ const jetbrainsMono = JetBrains_Mono({
   display: "swap",
 });
 
+const description =
+  "Precision-built mod packs for BeamNG.drive. Every vehicle tested, configured, and verified. No broken mods. No filler.";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: {
     default: "MiniModding — BeamNG.drive Mods",
     template: "%s — MiniModding",
   },
-  description:
-    "Precision-built mod packs for BeamNG.drive. Every vehicle tested, configured, and verified. No broken mods. No filler.",
+  description,
+  openGraph: {
+    type: "website",
+    siteName: "MiniModding",
+    title: "MiniModding — BeamNG.drive Mods",
+    description,
+    images: ["/logo.png"],
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
 };
 
 export default function RootLayout({

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import type { Changelog } from "@/lib/mods";
+import { formatDate } from "@/lib/site";
 
 interface ChangelogAccordionProps {
   /** Expected newest-first. */
@@ -46,13 +47,6 @@ export default function ChangelogAccordion({ changelogs }: ChangelogAccordionPro
       )}
     </div>
   );
-}
-
-/** Formats an ISO date (YYYY-MM-DD) as Norwegian DD.MM.YYYY. */
-function formatDate(isoDate: string): string {
-  const [year, month, day] = isoDate.split("-");
-  if (!year || !month || !day) return isoDate;
-  return `${day}.${month}.${year}`;
 }
 
 function ChangelogEntry({ entry, current }: { entry: Changelog; current?: boolean }) {

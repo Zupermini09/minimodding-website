@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, Star } from "lucide-react";
 import { getMod, getModSlugs, sortChangelogs } from "@/lib/mods";
+import { storageUrl } from "@/lib/supabase";
 import ImageCarousel from "@/components/ImageCarousel";
 import ChangelogAccordion from "@/components/ChangelogAccordion";
 import DownloadButton from "@/components/DownloadButton";
@@ -23,7 +24,18 @@ export async function generateMetadata({
   const { slug } = await params;
   const mod = getMod(slug);
   if (!mod) return { title: "Mod not found" };
-  return { title: mod.name, description: mod.tagline };
+  return {
+    title: mod.name,
+    description: mod.tagline,
+    openGraph: {
+      type: "website",
+      siteName: "MiniModding",
+      title: mod.name,
+      description: mod.tagline,
+      url: `/mods/${slug}/`,
+      images: [storageUrl(mod.coverImage)],
+    },
+  };
 }
 
 export default async function ModPage({

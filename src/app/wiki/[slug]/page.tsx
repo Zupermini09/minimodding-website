@@ -20,7 +20,17 @@ export async function generateMetadata({
   const { slug } = await params;
   const article = getWikiArticle(slug);
   if (!article) return { title: "Article not found" };
-  return { title: article.title, description: article.summary };
+  return {
+    title: article.title,
+    description: article.summary,
+    openGraph: {
+      type: "article",
+      siteName: "MiniModding",
+      title: article.title,
+      description: article.summary,
+      url: `/wiki/${slug}/`,
+    },
+  };
 }
 
 export default async function WikiArticlePage({

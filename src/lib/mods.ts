@@ -91,3 +91,32 @@ export function getFeaturedMod(): ModSummary | null {
 export function sortChangelogs(changelogs: Changelog[]): Changelog[] {
   return [...changelogs].sort((a, b) => b.date.localeCompare(a.date));
 }
+
+/** One mod's newest changelog entry, flattened for the homepage feed. */
+export interface LatestUpdate {
+  slug: string;
+  name: string;
+  version: string;
+  date: string;
+  /** First changelog note — a one-line teaser of what changed. */
+  highlight?: string;
+}
+
+/** Newest changelog entries across all mods, most recent first. */
+export function getLatestUpdates(limit = 3): LatestUpdate[] {
+  return getModSummaries()
+    .flatMap((summary) => {
+      const mod = getMod(summary.slug);
+      if (!mod || mod.changelogs.length === 0) return [];
+      const latest = sortChangelogs(mod.changelogs)[0];
+      return {
+        slug: mod.slug,
+        name: mod.name,
+        version: latest.version,
+        date: latest.date,
+        highlight: latest.notes[0],
+      };
+    })
+    .sort((a, b) => b.date.localeCompare(a.date))
+    .slice(0, limit);
+}
