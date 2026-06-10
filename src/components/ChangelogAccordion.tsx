@@ -48,6 +48,13 @@ export default function ChangelogAccordion({ changelogs }: ChangelogAccordionPro
   );
 }
 
+/** Formats an ISO date (YYYY-MM-DD) as Norwegian DD.MM.YYYY. */
+function formatDate(isoDate: string): string {
+  const [year, month, day] = isoDate.split("-");
+  if (!year || !month || !day) return isoDate;
+  return `${day}.${month}.${year}`;
+}
+
 function ChangelogEntry({ entry, current }: { entry: Changelog; current?: boolean }) {
   return (
     <div
@@ -61,7 +68,9 @@ function ChangelogEntry({ entry, current }: { entry: Changelog; current?: boolea
         >
           v{entry.version}
         </span>
-        <time className="label text-muted">{entry.date}</time>
+        <time dateTime={entry.date} className="label text-muted">
+          {formatDate(entry.date)}
+        </time>
         {current && <span className="label text-gold">Latest</span>}
       </div>
 
