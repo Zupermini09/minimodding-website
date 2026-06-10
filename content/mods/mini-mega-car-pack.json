@@ -7,6 +7,7 @@
   "isPaid": false,
   "starred": true,
   "game": "BeamNG.drive",
+  "version": "0.38",
   "coverImage": "mmcp/cover.jpg",
   "images": [
     "mmcp/cover.jpg"

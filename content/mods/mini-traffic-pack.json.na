@@ -7,6 +7,7 @@
   "isPaid": false,
   "starred": false,
   "game": "BeamNG.drive",
+  "version": "0.38",
   "coverImage": "traffic/cover.jpg",
   "images": [
     "traffic/cover.jpg",

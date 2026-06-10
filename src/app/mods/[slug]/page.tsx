@@ -79,6 +79,14 @@ export default async function ModPage({
             >
               {mod.isPaid ? "Subscriber" : "Free"}
             </span>
+            {mod.version && (
+              <span
+                className="label rounded-full border-[1.5px] border-accent/40 bg-accent/10 px-3 py-1.5 text-accent"
+                title={`Built for BeamNG.drive ${mod.version}`}
+              >
+                BeamNG {mod.version}
+              </span>
+            )}
           </div>
 
           <h1 className="text-display mt-6 text-4xl font-bold tracking-tight sm:text-6xl">

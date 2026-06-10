@@ -26,6 +26,8 @@ export interface Mod {
   isPaid?: boolean;
   starred?: boolean;
   game: string;
+  /** BeamNG game version the pack targets (not the pack version), e.g. "0.38". */
+  version?: string;
   /** Storage path or absolute URL. Resolve with `storageUrl()`. */
   coverImage: string;
   images: string[];
@@ -43,7 +45,11 @@ export interface ModSummary {
   starred?: boolean;
   isPaid?: boolean;
   featured?: boolean;
+  /** BeamNG game version the pack targets (not the pack version), e.g. "0.38". */
+  version?: string;
   coverImage: string;
+  /** Latest changelog date (ISO), derived from the full record at build time. */
+  updated?: string;
 }
 
 const MODS_DIR = path.join(process.cwd(), "content", "mods");
@@ -51,7 +57,16 @@ const MODS_DIR = path.join(process.cwd(), "content", "mods");
 /** Read the lightweight index used by the listing and homepage. */
 export function getModSummaries(): ModSummary[] {
   const raw = fs.readFileSync(path.join(MODS_DIR, "index.json"), "utf-8");
-  return JSON.parse(raw) as ModSummary[];
+  const summaries = JSON.parse(raw) as ModSummary[];
+  // Enrich with the newest changelog date so listings can sort by recency.
+  // Mods without a full record (e.g. disabled files) simply stay undated.
+  return summaries.map((summary) => {
+    const mod = getMod(summary.slug);
+    const updated = mod?.changelogs.length
+      ? sortChangelogs(mod.changelogs)[0].date
+      : undefined;
+    return { ...summary, updated };
+  });
 }
 
 /** Every mod slug — drives `generateStaticParams`. */

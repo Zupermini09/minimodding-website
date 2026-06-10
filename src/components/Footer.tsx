@@ -1,4 +1,5 @@
 import Link from "next/link";
+import DiscordIcon from "@/components/DiscordIcon";
 
 const NAV = [
   { href: "/", label: "Home" },
@@ -33,6 +34,15 @@ export default function Footer() {
                 {label}
               </Link>
             ))}
+            <a
+              href="https://discord.gg/ZWeZcCV9mf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm font-medium text-muted transition-colors hover:text-foreground"
+            >
+              <DiscordIcon size={15} />
+              Discord
+            </a>
             <a
               href="https://buymeacoffee.com/emilianovec/membership"
               target="_blank"

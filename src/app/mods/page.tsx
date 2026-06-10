@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { getModSummaries } from "@/lib/mods";
-import ModCard from "@/components/ModCard";
+import ModExplorer from "@/components/ModExplorer";
 
 export const metadata: Metadata = {
   title: "Mods",
@@ -34,11 +34,7 @@ export default function ModsPage() {
         </div>
       </header>
 
-      <div className="grid grid-cols-1 gap-6 pb-28 sm:grid-cols-2 sm:gap-8 lg:grid-cols-3">
-        {mods.map((mod, i) => (
-          <ModCard key={mod.id} mod={mod} index={i + 1} />
-        ))}
-      </div>
+      <ModExplorer mods={mods} />
     </div>
   );
 }

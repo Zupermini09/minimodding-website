@@ -61,8 +61,16 @@ export default function ModCard({ mod, index }: ModCardProps) {
           {mod.tagline}
         </p>
 
-        <div className="mt-auto flex items-center gap-2 pt-3">
+        <div className="mt-auto flex flex-wrap items-center gap-2 pt-3">
           <StatusTag paid={mod.isPaid} />
+          {mod.version && (
+            <span
+              className="label rounded-full border-[1.5px] border-accent/40 bg-accent/10 px-3 py-1.5 text-accent"
+              title={`Built for BeamNG.drive ${mod.version}`}
+            >
+              BeamNG {mod.version}
+            </span>
+          )}
         </div>
       </div>
     </Link>
