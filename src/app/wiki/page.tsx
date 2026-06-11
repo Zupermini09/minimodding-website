@@ -18,8 +18,11 @@ export default function WikiPage() {
           aria-hidden="true"
         />
         <div className="relative">
-        <p className="label text-accent">Wiki</p>
-        <div className="mt-4 flex flex-wrap items-end justify-between gap-4">
+        <p className="label anim-rise text-accent">Wiki</p>
+        <div
+          className="anim-rise mt-4 flex flex-wrap items-end justify-between gap-4"
+          style={{ "--rise-delay": "0.08s" } as React.CSSProperties}
+        >
           <h1 className="text-display text-5xl font-bold tracking-tight sm:text-6xl">
             Wiki
           </h1>
@@ -28,7 +31,10 @@ export default function WikiPage() {
             {articles.length === 1 ? "article" : "articles"}
           </span>
         </div>
-        <p className="mt-6 max-w-xl text-base leading-relaxed text-muted">
+        <p
+          className="anim-rise mt-6 max-w-xl text-base leading-relaxed text-muted"
+          style={{ "--rise-delay": "0.16s" } as React.CSSProperties}
+        >
           Guides, references, and documentation — how to install, configure, and
           get the most out of every MiniModding pack.
         </p>
@@ -37,7 +43,13 @@ export default function WikiPage() {
 
       <div className="grid grid-cols-1 gap-6 pb-28 sm:grid-cols-2 sm:gap-8 lg:grid-cols-3">
         {articles.map((article, i) => (
-          <WikiCard key={article.id} article={article} index={i + 1} />
+          <div
+            key={article.id}
+            className="anim-rise grid"
+            style={{ "--rise-delay": `${0.2 + Math.min(i, 8) * 0.07}s` } as React.CSSProperties}
+          >
+            <WikiCard article={article} index={i + 1} />
+          </div>
         ))}
       </div>
     </div>

@@ -63,23 +63,32 @@ export default async function WikiArticlePage({
 
       {/* Title block */}
       <header>
-        <div className="flex flex-wrap items-center gap-3">
+        <div className="anim-rise flex flex-wrap items-center gap-3">
           <span className="label rounded-full border-[1.5px] border-line-strong px-3 py-1.5 text-muted">
             {article.category}
           </span>
           <span className="label text-muted">Updated {updated}</span>
         </div>
 
-        <h1 className="text-display mt-6 text-4xl font-bold tracking-tight sm:text-5xl">
+        <h1
+          className="text-display anim-rise mt-6 text-4xl font-bold tracking-tight sm:text-5xl"
+          style={{ "--rise-delay": "0.08s" } as React.CSSProperties}
+        >
           {article.title}
         </h1>
-        <p className="mt-5 max-w-2xl font-mono text-sm leading-relaxed text-muted sm:text-base">
+        <p
+          className="anim-rise mt-5 max-w-2xl font-mono text-sm leading-relaxed text-muted sm:text-base"
+          style={{ "--rise-delay": "0.16s" } as React.CSSProperties}
+        >
           {article.summary}
         </p>
       </header>
 
       {/* Body */}
-      <article className="mt-12 border-t-[1.5px] border-line pt-10">
+      <article
+        className="anim-rise mt-12 border-t-[1.5px] border-line pt-10"
+        style={{ "--rise-delay": "0.24s" } as React.CSSProperties}
+      >
         <Markdown>{article.body}</Markdown>
       </article>
 

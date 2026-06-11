@@ -18,8 +18,11 @@ export default function ModsPage() {
           aria-hidden="true"
         />
         <div className="relative">
-        <p className="label text-accent">Mods</p>
-        <div className="mt-4 flex flex-wrap items-end justify-between gap-4">
+        <p className="label anim-rise text-accent">Mods</p>
+        <div
+          className="anim-rise mt-4 flex flex-wrap items-end justify-between gap-4"
+          style={{ "--rise-delay": "0.08s" } as React.CSSProperties}
+        >
           <h1 className="text-display text-5xl font-bold tracking-tight sm:text-6xl">
             Mods
           </h1>
@@ -27,7 +30,10 @@ export default function ModsPage() {
             {String(mods.length).padStart(2, "0")} {mods.length === 1 ? "entry" : "entries"}
           </span>
         </div>
-        <p className="mt-6 max-w-xl text-base leading-relaxed text-muted">
+        <p
+          className="anim-rise mt-6 max-w-xl text-base leading-relaxed text-muted"
+          style={{ "--rise-delay": "0.16s" } as React.CSSProperties}
+        >
           A curated catalogue of BeamNG.drive packs — each one built, tested, and
           configured by hand.
         </p>

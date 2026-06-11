@@ -2,6 +2,7 @@ import Link from "next/link";
 import BrandLogo from "@/components/BrandLogo";
 import DiscordIcon from "@/components/DiscordIcon";
 import NavLinks from "@/components/NavLinks";
+import ScrollProgress from "@/components/ScrollProgress";
 import ThemeToggle from "@/components/ThemeToggle";
 
 export default function Navbar() {
@@ -29,6 +30,7 @@ export default function Navbar() {
           </span>
         </div>
       </nav>
+      <ScrollProgress />
     </header>
   );
 }

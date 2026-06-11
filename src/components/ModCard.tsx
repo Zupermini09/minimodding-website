@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { Star, ArrowUpRight } from "lucide-react";
 import type { ModSummary } from "@/lib/mods";
@@ -16,7 +18,12 @@ export default function ModCard({ mod, index }: ModCardProps) {
   return (
     <Link
       href={`/mods/${mod.slug}`}
-      className="group relative flex flex-col overflow-hidden rounded-3xl border-[1.5px] border-line bg-surface shadow-card transition-all duration-300 hover:-translate-y-1.5 hover:border-line-strong hover:shadow-card-hover"
+      onPointerMove={(e) => {
+        const rect = e.currentTarget.getBoundingClientRect();
+        e.currentTarget.style.setProperty("--spot-x", `${e.clientX - rect.left}px`);
+        e.currentTarget.style.setProperty("--spot-y", `${e.clientY - rect.top}px`);
+      }}
+      className="spotlight-card group relative flex flex-col overflow-hidden rounded-3xl border-[1.5px] border-line bg-surface shadow-card transition-all duration-300 hover:-translate-y-1.5 hover:border-line-strong hover:shadow-card-hover"
     >
       {/* Cover */}
       <div className="relative aspect-[16/10] overflow-hidden">

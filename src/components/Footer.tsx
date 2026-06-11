@@ -11,7 +11,12 @@ const NAV = [
 export default function Footer() {
   const year = new Date().getFullYear();
   return (
-    <footer className="border-t-[1.5px] border-line bg-surface/40">
+    <footer className="relative border-t-[1.5px] border-line bg-surface/40">
+      {/* Amber hairline fading out to the right, sitting on the top border. */}
+      <div
+        className="absolute inset-x-0 -top-px h-px bg-gradient-to-r from-accent/70 via-accent/20 to-transparent"
+        aria-hidden="true"
+      />
       <div className="mx-auto max-w-6xl px-6 py-14 sm:px-8">
         <div className="flex flex-col gap-8 sm:flex-row sm:items-start sm:justify-between">
           <div className="max-w-xs">

@@ -7,6 +7,7 @@ import { storageUrl } from "@/lib/supabase";
 import ImageCarousel from "@/components/ImageCarousel";
 import ChangelogAccordion from "@/components/ChangelogAccordion";
 import DownloadButton from "@/components/DownloadButton";
+import Reveal from "@/components/Reveal";
 import SubscribeButton from "@/components/SubscribeButton";
 
 // Static export: only the slugs returned here are built; nothing is dynamic.
@@ -69,12 +70,8 @@ export default async function ModPage({
 
       {/* Title block */}
       <header className="relative">
-        <div
-          className="hero-glow pointer-events-none absolute -inset-x-8 -inset-y-12"
-          aria-hidden="true"
-        />
         <div className="relative">
-          <div className="flex flex-wrap items-center gap-3">
+          <div className="anim-rise flex flex-wrap items-center gap-3">
             <span className="label text-muted">{mod.game}</span>
             {mod.starred && (
               <span className="flex items-center gap-1.5">
@@ -101,21 +98,31 @@ export default async function ModPage({
             )}
           </div>
 
-          <h1 className="text-display mt-6 text-4xl font-bold tracking-tight sm:text-6xl">
+          <h1
+            className="text-display anim-rise mt-6 text-4xl font-bold tracking-tight sm:text-6xl"
+            style={{ "--rise-delay": "0.08s" } as React.CSSProperties}
+          >
             {mod.name}
           </h1>
-          <p className="mt-5 max-w-2xl font-mono text-sm leading-relaxed text-muted sm:text-base">
+          <p
+            className="anim-rise mt-5 max-w-2xl font-mono text-sm leading-relaxed text-muted sm:text-base"
+            style={{ "--rise-delay": "0.16s" } as React.CSSProperties}
+          >
             {mod.tagline}
           </p>
         </div>
       </header>
 
       {/* Carousel */}
-      <section className="mt-12">
+      <section
+        className="anim-rise mt-12"
+        style={{ "--rise-delay": "0.24s" } as React.CSSProperties}
+      >
         <ImageCarousel images={frames} alt={mod.name} />
       </section>
 
       {/* Body: description + downloads */}
+      <Reveal>
       <div className="mt-16 grid grid-cols-1 gap-12 lg:grid-cols-3">
         <section className="lg:col-span-2">
           <p className="label text-accent">Overview</p>
@@ -141,14 +148,17 @@ export default async function ModPage({
           </div>
         </aside>
       </div>
+      </Reveal>
 
       {/* Changelog */}
-      <section className="mt-20">
-        <p className="label text-accent">Changelog</p>
-        <div className="mt-7">
-          <ChangelogAccordion changelogs={changelogs} />
-        </div>
-      </section>
+      <Reveal>
+        <section className="mt-20">
+          <p className="label text-accent">Changelog</p>
+          <div className="mt-7">
+            <ChangelogAccordion changelogs={changelogs} />
+          </div>
+        </section>
+      </Reveal>
 
       <div className="h-28" />
     </div>

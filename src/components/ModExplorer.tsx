@@ -92,7 +92,14 @@ export default function ModExplorer({ mods }: { mods: ModSummary[] }) {
       {visible.length > 0 ? (
         <div className="grid grid-cols-1 gap-6 pb-28 sm:grid-cols-2 sm:gap-8 lg:grid-cols-3">
           {visible.map((mod, i) => (
-            <ModCard key={mod.id} mod={mod} index={i + 1} />
+            <div
+              key={mod.id}
+              className="anim-rise grid"
+              // Stagger the first rows, then cap so deep grids don't lag in.
+              style={{ "--rise-delay": `${Math.min(i, 8) * 0.07}s` } as React.CSSProperties}
+            >
+              <ModCard mod={mod} index={i + 1} />
+            </div>
           ))}
         </div>
       ) : (
