@@ -2,7 +2,7 @@
   "id": "mini-mega-car-pack",
   "name": "Mini's Mega Car Pack",
   "slug": "mini-mega-car-pack",
-  "tagline": "My biggest car pack with 100+ cars.",
+  "tagline": "My biggest car pack with 106 cars.",
   "featured": true,
   "isPaid": false,
   "starred": true,
@@ -12,11 +12,11 @@
   "images": [
     "mmcp/cover.jpg"
   ],
-  "description": "The most curated car pack for BeamNG.drive. Every vehicle is individually tested, configured from scratch, and given custom thumbnails. No broken mods. No filler — just 130+ vehicles that load clean, drive right, and sit correctly in the spawn menu.",
+  "description": "The most curated car pack for BeamNG.drive. Every vehicle is individually tested, configured from scratch, and given custom thumbnails. No broken mods. No filler — just 106 vehicles that load clean, drive right, and sit correctly in the spawn menu.",
   "downloads": [
     {
-      "label": "Free Download (Lite Version) Coming Soon!",
-      "url": "https://zupermini09.github.io/minimodding-website/",
+      "label": "Free Download (Lite Version - 27 Cars)",
+      "url": "https://download.skranium.com/Lite%20V2.5.zip",
       "type": "free"
     },
     {
@@ -26,6 +26,25 @@
     }
   ],
   "changelogs": [
+    {
+      "version": "2.5",
+      "date": "2026-06-13",
+      "notes": [
+        "Removed 6 broken vehicles: McLaren 720S, Ford Mustang S550, Nissan Silvia S15, Nissan GT-R R35, Lamborghini Revuelto, Chevrolet Camaro ZL1+RS",
+        "Fixed missing tires on Chevrolet Corvette C7 Z06",
+        "Fixed outdated mod warning on Bugatti Chiron",
+        "Added Mazda RX-7",
+        "Added Pagani Huayra",
+        "Added Mitsubishi Eclipse",
+        "Added Toyota MR2",
+        "Added Ford Focus RS",
+        "Added Audi RS5 S5",
+        "Added Nissan Silvia S13",
+        "Added Toyota GR86",
+        "Introduced free Lite version with 27 cars",
+        "Pack now contains 106 vehicles"
+      ]
+    },
     {
       "version": "2.4",
       "date": "2025-06-08",
