@@ -24,6 +24,7 @@ const BUCKET = "mod-images";
 export function storageUrl(pathOrUrl: string): string {
   if (!pathOrUrl) return "";
   if (/^https?:\/\//i.test(pathOrUrl)) return pathOrUrl;
+  if (pathOrUrl.startsWith("/")) return pathOrUrl;
 
   const base = SUPABASE_URL.replace(/\/+$/, "");
   const clean = pathOrUrl.replace(/^\/+/, "");
