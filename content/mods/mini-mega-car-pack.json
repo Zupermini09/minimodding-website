@@ -2,7 +2,7 @@
   "id": "mini-mega-car-pack",
   "name": "Mini's Mega Car Pack",
   "slug": "mini-mega-car-pack",
-  "tagline": "My biggest car pack with 106 cars.",
+  "tagline": "The largest curated BeamNG.drive car pack — 106 individually tested vehicles, updated for 0.38.",
   "featured": true,
   "isPaid": false,
   "starred": true,
@@ -12,7 +12,7 @@
   "images": [
     "/images/mods/mmcp/cover.jpg"
   ],
-  "description": "The most curated car pack for BeamNG.drive. Every vehicle is individually tested, configured from scratch, and given custom thumbnails. No broken mods. No filler — just 106 vehicles that load clean, drive right, and sit correctly in the spawn menu.",
+  "description": "Mini's Mega Car Pack is the biggest curated vehicle pack for BeamNG.drive, featuring 106 individually tested cars from over 25 brands — including Toyota, Mazda, Nissan, Mitsubishi, Ford, Chevrolet, Audi, Bugatti, and Pagani. Every vehicle ships with a custom configuration built from scratch and a unique custom thumbnail, so the spawn menu stays clean and every car loads correctly, drives right, and sits at the right height.\n\nThere are no broken mods, no placeholder configs, and no filler. The pack is actively maintained and updated for every major BeamNG.drive release — currently up to date with BeamNG 0.38 and available on Modland. It has grown steadily from its first release to 106 vehicles, making it one of the most complete and consistently updated car packs in the BeamNG modding community.",
   "downloads": [
     {
       "label": "Free Download (Lite Version - 27 Cars)",
